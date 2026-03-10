@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    color-scheme: dark;
+}
+
+html,
+body {
+    height: 100%;
+    background: radial-gradient(circle at top, rgba(99, 102, 241, 0.24), transparent 55%),
+        radial-gradient(circle at 20% 20%, rgba(236, 72, 153, 0.18), transparent 45%),
+        linear-gradient(180deg, #0b1220 0%, #05080e 100%);
+    color: #f8fafc;
+}
+
+::selection {
+    background: rgba(99, 102, 241, 0.45);
+}
+
+/* Glassmorphism helpers */
+.glass {
+    @apply bg-white/5 border border-white/10 backdrop-blur-xl shadow-glow;
+}
+
+.glass-hover:hover {
+    @apply bg-white/10 border-white/20;
+}
+
+.fade-in {
+    animation: fadeIn 0.9s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
